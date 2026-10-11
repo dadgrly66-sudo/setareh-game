@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111126">
+<title>پرونده‌ی مخفی ستاره ⭐</title>
+<style>
+:root{--bg:#101022;--panel:#1b1a35;--gold:#f1d18a;--pink:#ff9fb4;--text:#fff8ef;--muted:#c8c3da}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:Tahoma,"Vazirmatn",sans-serif;color:var(--text);background:radial-gradient(ellipse at top,#34305b 0%,#17162f 42%,#0c0c19 100%);overflow-x:hidden}
+body:before{content:"✦  ·   ✧       ·  ✦     ·      ✧";position:fixed;inset:0;pointer-events:none;color:#f1d18a44;font-size:24px;letter-spacing:18px;line-height:3;overflow:hidden;z-index:0}
+main{position:relative;z-index:1;width:min(720px,92vw);margin:0 auto;padding:28px 0 48px}
+.top{text-align:center;padding:24px 10px 12px}
+.badge{display:inline-block;border:1px solid #f1d18a77;color:var(--gold);border-radius:999px;padding:7px 14px;font-size:12px;letter-spacing:.4px}
+h1{font-size:clamp(28px,7vw,44px);margin:18px 0 10px;line-height:1.5}
+h1 span{color:var(--pink)}
+.sub{color:var(--muted);line-height:2;margin:0 auto;max-width:500px}
+.card{background:linear-gradient(145deg,#242243ed,#17172fee);border:1px solid #ffffff1b;border-radius:24px;padding:clamp(20px,5vw,34px);box-shadow:0 18px 55px #0005;margin-top:18px}
+.progress{height:5px;background:#ffffff14;border-radius:9px;overflow:hidden;margin-bottom:24px}
+.progress div{height:100%;width:0;background:linear-gradient(90deg,var(--pink),var(--gold));transition:width .35s}
+.kicker{color:var(--gold);font-size:13px;margin-bottom:8px}
+h2{font-size:23px;margin:8px 0 12px}
+p{line-height:2}
+.question{font-size:18px;line-height:2;margin:14px 0 18px}
+.answers{display:grid;gap:10px}
+button{font:inherit;cursor:pointer}
+.answer,.primary,.secondary{border-radius:14px;padding:14px 16px;border:1px solid #ffffff25;color:var(--text);background:#ffffff0a;text-align:right;transition:.2s}
+.answer:hover,.answer:focus{border-color:var(--gold);background:#f1d18a12}
+.primary{display:block;text-align:center;background:linear-gradient(100deg,#c98299,#e9c879);color:#21172a;border:0;font-weight:bold;width:100%;margin-top:18px}
+.secondary{display:block;text-align:center;width:100%;margin-top:10px}
+.note{color:var(--muted);font-size:12px;line-height:1.9}
+.feedback{min-height:28px;color:var(--gold);font-size:14px;margin-top:12px}
+.hidden{display:none!important}
+.envelope{margin:18px auto 24px;width:150px;height:100px;position:relative;background:#c98d9f;border-radius:8px;box-shadow:0 8px 28px #0005}
+.envelope:before{content:"";position:absolute;inset:0;background:#e7b8bf;clip-path:polygon(0 0,50% 57%,100% 0)}
+.envelope:after{content:"♥";position:absolute;left:calc(50% - 14px);top:34px;font-size:27px;color:#6f2948}
+.letter{background:#fff3d8;color:#382b35;border-radius:14px;padding:24px;line-height:2.15;box-shadow:0 10px 25px #0003;white-space:pre-line}
+.letter strong{color:#9d4767}
+footer{text-align:center;color:#aaa5bf;font-size:12px;margin-top:20px}
+.spark{font-size:28px;color:var(--gold)}
+input{font:inherit}
+@media(prefers-reduced-motion:no-preference){.card{animation:rise .5s ease both}@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}}
+</style>
+</head>
+<body>
+<main>
+<header class="top">
+  <div class="badge">یک پرونده‌ی محرمانه · فقط برای ستاره</div>
+  <h1>پرونده‌ی مخفی <span>ستاره</span> ⭐</h1>
+  <p class="sub">سه معما، سه سرنخ، و یک پاکت که فقط با رسیدن به پایان باز می‌شود…<br>آماده‌ای؟</p>
+</header>
+<section class="card" id="game">
+  <div class="progress"><div id="bar"></div></div>
+  <div id="screen"></div>
+</section>
+<footer>ساخته‌شده با کمی فکر، کمی ستاره و یک عالمه لبخند ✦</footer>
+</main>
+<script>
+const steps = [
+ {k:"معمای اول · سرنخ ماه",q:"شب‌ها در آسمانم، گاهی باریک و گاهی کامل؛ اما اسم من روی این پرونده هم هست. چی‌ام؟",a:["خورشید","ستاره","ابر"],correct:1,ok:"درست گفتی! اولین سرنخ مال توئه: بعضی نورها از دور هم دیده می‌شن. ⭐",no:"یه بار دیگه فکر کن؛ اسم پرونده خودش یه راهنمای کوچیکه."},
+ {k:"معمای دوم · چیزی که دیده نمی‌شود",q:"هرچه بیشتر با کسی تقسیمش کنی، کمتر نمی‌شود؛ گاهی حتی بیشتر هم می‌شود. چیست؟",a:["مهربانی","ساعت","باران"],correct:0,ok:"آفرین! سرنخ دوم: مهربونی، حتی از راه دور هم می‌رسه. 💌",no:"به چیزی فکر کن که با بخشیدنش، از خودت کم نمی‌کنی."},
+ {k:"معمای سوم · رمز لبخند",q:"لازم نیست بزرگ یا گران باشد؛ گاهی با یک جمله‌ی صادقانه می‌آید و حال آدم را بهتر می‌کند. چیست؟",a:["یک لبخند","یک چمدان","یک کلید"],correct:0,ok:"درست شد! سه سرنخ کامل شد؛ پاکت مخفی آماده‌ی باز شدنه. ❤️",no:"یه چیز کوچیک و قشنگ که روی صورت آدم می‌شینه…"}
+];
+let step=0;
+const screen=document.getElementById('screen'),bar=document.getElementById('bar');
+function renderIntro(){bar.style.width='0%';screen.innerHTML=`<div class="kicker">پیام از بخش اسرار</div><h2>سلام، ستاره جان ✨</h2><p>این یه بازی کوچیکه که مخصوص تو آماده شده. جواب‌ها سخت نیستن؛ فقط با حوصله بخون و هر گزینه‌ای رو که فکر می‌کنی درسته انتخاب کن.</p><p class="note">راهنمایی: جایزه‌ی آخر، پولی نیست؛ یه پیام شخصیه که از راه دور برات آماده شده.</p><button class="primary" onclick="renderQuestion()">شروع پرونده</button>`}
+function renderQuestion(){const s=steps[step];bar.style.width=(step/steps.length*100)+'%';screen.innerHTML=`<div class="kicker">${s.k}</div><h2>سرنخ ${step+1} از 3</h2><div class="question">${s.q}</div><div class="answers">${s.a.map((x,i)=>`<button class="answer" onclick="choose(${i})">${x}</button>`).join('')}</div><div class="feedback" id="feedback" aria-live="polite"></div>`}
+function choose(i){const s=steps[step],fb=document.getElementById('feedback');if(i!==s.correct){fb.textContent=s.no;return}fb.textContent=s.ok;document.querySelectorAll('.answer').forEach(b=>b.disabled=true);const buttons=document.querySelectorAll('.answer');buttons[i].style.borderColor='#f1d18a';buttons[i].style.background='#f1d18a1a';const next=document.createElement('button');next.className='primary';next.textContent=step===2?'باز کردن پاکت مخفی 💌':'رفتن به سرنخ بعدی ←';next.onclick=()=>{step++;if(step<steps.length)renderQuestion();else renderPrize()};screen.appendChild(next);bar.style.width=((step+1)/steps.length*100)+'%'}
+function renderPrize(){bar.style.width='100%';screen.innerHTML=`<div style="text-align:center"><div class="spark">✦ ✧ ✦</div><h2>پاکت مخفی برای ستاره</h2><p>همه‌ی سرنخ‌ها رو پیدا کردی… حالا جایزه‌ات رو باز کن.</p><div class="envelope" aria-hidden="true"></div><button class="primary" onclick="openLetter()">باز کردن نامه‌ی تو ❤️</button><p class="note">پیشنهاد: بعد از خوندن نامه، صدای کسی رو هم بشنو که این بازی رو برات آماده کرده.</p></div>`}
+function openLetter(){screen.innerHTML=`<div class="kicker">نامه‌ی محرمانه · فقط برای ستاره</div><div class="letter">ستاره‌ی عزیزم ⭐❤️
+
+روز دختر مبارک!
+
+کاش امروز می‌تونستم کنارت باشم و خنده‌تو از نزدیک ببینم؛ اما فعلاً بین تبریز و تهران فاصله‌ست و من با همین چند خط می‌خوام یه لبخند کوچیک مهمون صورتت کنم.
+
+نمی‌دونم آینده چی می‌شه، ولی خوشحالم که تو رو شناختم. هنوز زمان زیادی از آشنایی‌مون نگذشته، اما حرف زدن با تو برای من حس قشنگی داره.
+
+دلم می‌خواد حتی برای چند دقیقه هم که شده، دلیل لبخندت باشم. امیدوارم همیشه دلت آروم باشه، بخندی، به آرزوهات برسی و هیچ‌وقت یادت نره که ارزش تو به هدیه و پول نیست؛ به خودِ قشنگت، قلب مهربونت و لبخندیه که مال خودته.
+
+این یه هدیه‌ی کوچیک از راه دوره؛ نه برای اینکه چیزی ازت بخوام، فقط برای اینکه امروزت یه ذره قشنگ‌تر بشه.
+
+<strong>روز دخترت مبارک، ستاره جان. مراقب لبخند قشنگت باش. ❤️</strong>
+
+از تبریز، با آرزوی یه روز روشن برای تو…
+علی ✨</div><button class="primary" onclick="copyLetter()">کپی کردن نامه 💌</button><button class="secondary" onclick="restart()">از اول بازی کن</button><div class="feedback" id="copyStatus" aria-live="polite"></div>`}
+async function copyLetter(){const t=document.querySelector('.letter').innerText;try{await navigator.clipboard.writeText(t);document.getElementById('copyStatus').textContent='نامه کپی شد؛ می‌تونی نگهش داری یا بفرستی.'}catch(e){document.getElementById('copyStatus').textContent='متن نامه رو می‌تونی با لمس طولانی انتخاب و کپی کنی.'}}
+function restart(){step=0;renderIntro()}
+renderIntro();
+</script>
+</body>
+</html>
